@@ -71,7 +71,7 @@ You can also build a Docker image to run the Pub-Sub System in a container:
 2. Run the Docker container:
 
    ```bash
-   docker run -p 8000:8000 -p 6379:6379 -v "$(pwd)/redis_data:/data" pub_sub_system:latest
+   docker run -p 8000:8000 -p 6379:6379 -v --name pub_sub_container "$(pwd)/redis_data:/data" pub_sub_system:latest
    ```
 
    - The `-p 8000:8000` flag maps port 8000 from the host system to port 8000 inside the container.
