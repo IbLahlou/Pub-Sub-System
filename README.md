@@ -58,11 +58,30 @@ The Pub-Sub System is a simple Python project that demonstrates the implementati
 
 4. Feel free to extend and use this template in your projects.
 
+## Docker Image
+
+You can also build a Docker image to run the Pub-Sub System in a container:
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t pub_sub_system:latest .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -p 8000:8000 -p 6379:6379 -v "$(pwd)/redis_data:/data" pub_sub_system:latest
+   ```
+
+   - The `-p 8000:8000` flag maps port 8000 from the host system to port 8000 inside the container.
+   - The `-p 6379:6379` flag maps port 6379 from the host system to port 6379 inside the container for Redis.
+   - The `-v "$(pwd)/redis_data:/data"` flag mounts the `redis_data` directory within the repository to the `/data` directory inside the container for persisting Redis data.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
 ## Acknowledgments
 
-Special thanks to OpenAI for creating the GPT-3.5-based language model used to generate this README.md file 
+Special thanks to OpenAI for creating the GPT-3.5-based language model used to generate this README.md file.
