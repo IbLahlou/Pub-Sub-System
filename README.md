@@ -81,7 +81,3 @@ You can also build a Docker image to run the Pub-Sub System in a container:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-Special thanks to OpenAI for creating the GPT-3.5-based language model used to generate this README.md file.
